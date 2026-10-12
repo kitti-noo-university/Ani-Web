@@ -88,7 +88,7 @@ npm run dev
 | Backend API | `node index.js` | เริ่ม API server |
 | File server | `node server.js` | เริ่ม upload/download server |
 
-Backend ไม่มี npm scripts สำหรับ start หรือ test; ใช้คำสั่ง `node` ตามตาราง
+Backend ไม่มี npm script สำหรับ start; คำสั่ง `test` เป็น placeholder ที่แจ้งว่ายังไม่มี test ให้รัน ใช้คำสั่ง `node` ตามตารางเพื่อเริ่ม services
 
 ## API ที่มีใน source
 
@@ -100,7 +100,7 @@ Backend API ทุกเส้นทางด้านล่างมี prefix 
 | `GET`, `PUT`, `DELETE` | `/api/animes/:anime_id` | ดู แก้ไข หรือลบอนิเมะตาม ID |
 | `POST` | `/api/register` | สมัครสมาชิก |
 | `POST` | `/api/login` | เข้าสู่ระบบและรับ JWT |
-| `GET` | `/api/profile` | ดู profile โดยส่ง ****** |
+| `GET` | `/api/profile` | ดู profile โดยส่ง JWT ผ่าน authorization header |
 | `GET` | `/api/logout` | ล้าง authentication cookie |
 
 File server แยกจาก API: `POST /upload`, `GET /files` และ `GET /files/:name` ที่พอร์ต `8080`
